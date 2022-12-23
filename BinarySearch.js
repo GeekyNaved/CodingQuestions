@@ -26,3 +26,16 @@ function BinarySearch(arr, size, key) {
     }
     return -1;
 }
+
+
+// Binary Search - steps
+
+// 1. Find mid element using mid = s + (e -s)/2
+// 2. Run loop (start <= end)
+// 3. Inside loop: compare mid and key if true return mid else proceed to next step
+// 4. if key > arr[mid] then go to right side by s= mid + 1;
+// 5. else go to left part by end = mid -1;
+// 6. then update mid = s + (e - s)/2;
+// 7. after loop end return -1;
+
+// Time complexity for this algo is O(log n) (worst case)
