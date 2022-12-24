@@ -19,3 +19,40 @@ for(let i=0; i<a.length; i++){
 // console.log("------------------------")
 console.log(pair)
 console.log(n1,n2)
+
+
+
+// Clean code 
+
+let arr = [-5,-4,-3,-2,0,2,4,6,8];
+
+function getSumZeroPair(arr) {
+for(let i = 0; i< arr.length; i++) {
+  for(let j = i+1; j< arr.length; j++) {
+    if(a[rri] + arr[j] == 0) {
+      return [arr[i], arr[j]];
+    }
+  }
+}
+}
+console.log(getSumZeroPair(arr))
+
+
+// optimized solution - Time Complexity - O(n)
+
+let ar = [-5,-4,-3,-2,0,2,4,6,8];
+let first = 0, last = a.length -1;
+function getSumZeroPair (a,first,last) {
+while(first < last) {
+    sum = a[first] + a[last];
+    if(sum == 0){
+        return [a[first], a[last]];
+    } else if(sum > 0){
+        last--;
+    } else {
+        first++;
+    }
+}
+}
+
+console.log(getSumZeroPair(ar,first,last))
